@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Canvas with viewport example</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+  <script src="../dist/fabricjs_viewport.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    body{
+      background: #ccc;
+    }
+    .canvas-container{
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="buttons">
+  <a href="#" class="active btn btn-primary edit {{moveClass}}"><i class="fa fa-edit"></i> Edit mode</a>
+  <a href="#" class="btn btn-primary pencil {{drawClass}}"><i class="fa fa-pencil"></i> Draw mode</a>
+  <a href="#" class="btn btn-primary grab {{moveClass}}"><i class="fa fa-arrows"></i> Grab mode</a>
+  <a href="#" class="btn btn-primary zoom-in"><i class="fa  fa-search-plus"></i> Zoom in</a>
+  <a href="#" class="btn btn-primary zoom-out"><i class="fa  fa-search-minus"></i> Zoom out</a>
+  <a href="#" class="btn btn-primary btn-danger eraser"><i class="fa fa-eraser"></i> Clear</a>
+</div>
+<canvas id="zoomable_canvas" width="600px" height="600px"></canvas>
+<script type="text/javascript">
+  var c = new fabric.CanvasWithViewport("zoomable_canvas", {isDrawingMode: true});
+  c.isDrawingMode = false;
+  $(".buttons .edit").click(function(){
+    $(this).addClass("active");
+    $(".buttons a").not(this).removeClass("active");
+
+    c.isDrawingMode = false;
+    c.isGrabMode = false;
+
+    return false;
+  })
+
+  $(".buttons .pencil").click(function(){
+    $(this).addClass("active");
+    $(".buttons a").not(this).removeClass("active");
+
+    c.isDrawingMode = true;
+    c.isGrabMode = false;
+
+    return false;
+  })
+
+  $(".buttons .grab").click(function(){
+    $(this).addClass("active");
+    $(".buttons a").not(this).removeClass("active");
+
+    c.isDrawingMode = false;
+    c.isGrabMode = true;
+
+    return false;
+  })
+
+  $(".buttons .zoom-in").click(function(){
+    c.setZoom(c.viewport.zoom*1.1);
+    return false;
+  })
+
+  $(".buttons .zoom-out").click(function(){
+    c.setZoom(c.viewport.zoom/1.1);
+    return false;
+  })
+
+  $(".buttons .eraser").click(function(){
+    c.clear();
+    return false;
+  })
+
+  var rect = new fabric.Rect({
+    left: 150,
+    top: 200,
+    originX: 'left',
+    originY: 'top',
+    width: 150,
+    height: 120,
+    angle: -10,
+    fill: 'rgba(255,0,0,0.5)',
+    transparentCorners: false
+  });
+
+  c.add(rect).setActiveObject(rect);
+
+</script>
+</body>
+</html>
