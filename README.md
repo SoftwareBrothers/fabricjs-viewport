@@ -4,7 +4,7 @@
 
 Simple implementation of viewport and zoom in fabricjs. 
 
-1. Doesn't change data model, so every objects on your canvas wont be changed after zooming/grabbing
+1. Doesn't change data model, so none of the objects on your canvas is changed after zooming/grabbing
 2. Supports touch devices
 3. Supports free drawing mode
 
@@ -12,9 +12,10 @@ First [see an example](http://wojtek-krysiak.github.io/fabricjs-viewport/)
 
 ### How to use it
 
-Currently it depends on jquery (i plan to fix it soon). So in HEAD of your HTML file include jquery, fabricjs and fabricjs-viewport. fabricjs-viewport.js is in this repo in the /dist/ folder.
+Currently it depends on jquery, however I plan to fix it soon.
+In the HEAD of your HTML file include jQuery, fabricjs and fabricjs-viewport. You can find fabricjs-viewport.js in this repo in the /dist/ directory.
 
-For example from CDNs (order matters):
+You can invclude those libraries from CDNs (order matters):
 
 ```javascript
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -22,11 +23,11 @@ For example from CDNs (order matters):
 <script src="fabricjs_viewport.js"></script>
 ```
 
-Next if you need to use zooming or viewport changing in your project just use fabric.CanvasWithViewport insteed of fabric.Canvas
+Next if you need to use zooming or changing viewport in your project just use fabric.CanvasWithViewport insteed of fabric.Canvas
 
     var c = new fabric.CanvasWithViewport("id-of-your-canvas");
 
-And now you will be able to:
+Now you are be able to:
 
 Turn on grabbing mode:
 
@@ -34,9 +35,9 @@ Turn on grabbing mode:
 c.isGrabMode = true;
 ```
 
-and you will be able to chage the viewport by drag and drop on the canvas.
+With this you can change the viewport with drag and drop on the canvas.
 
-You also will be able to change the zoom: 
+You also can zoom in and out: 
 
 ```javascript
 c.setZoom(c.viewport.zoom*1.1); // zoom in by 10%
