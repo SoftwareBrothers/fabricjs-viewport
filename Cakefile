@@ -2,6 +2,7 @@ fs     = require 'fs'
 {exec} = require 'child_process'
 
 appFiles  = [
+  'fabric/controls_extension/object'
   'fabric/viewport'
   'fabric/pencil_brush'
   'fabric/canvas_with_viewport'

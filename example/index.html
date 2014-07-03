@@ -27,7 +27,7 @@
 </div>
 <canvas id="zoomable_canvas" width="600px" height="600px"></canvas>
 <script type="text/javascript">
-  var c = new fabric.CanvasWithViewport("zoomable_canvas", {isDrawingMode: true});
+  var c = new fabric.Canvas("zoomable_canvas", {isDrawingMode: true});
   c.isDrawingMode = false;
   $(".buttons .edit").click(function(){
     $(this).addClass("active");
