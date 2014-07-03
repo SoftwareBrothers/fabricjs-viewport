@@ -40,7 +40,7 @@
     if (!this.hasBorders) {
       return this;
     }
-    zoom = (((_ref = this.canvas) != null ? (_ref1 = _ref.viewport) != null ? _ref1.zoom : void 0 : void 0) != null) || 1;
+    zoom = ((_ref = this.canvas) != null ? (_ref1 = _ref.viewport) != null ? _ref1.zoom : void 0 : void 0) || 1;
     padding = this.padding;
     padding2 = padding * 2;
     strokeWidth = ~~(this.strokeWidth / 2) * 2;
