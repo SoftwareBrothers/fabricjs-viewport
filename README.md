@@ -1,9 +1,12 @@
 # fabricjs-viewport
 
+[![KMPIT](http://kmpit.com/badge_kmpit.png)](http://bitly.com/kmpitcom) [![KMPIT](http://kmpit.com/badge_howwedoapps.png)](http://bitly.com/howwedoapps)
+
 Simple implementation of viewport and zoom in fabricjs. 
 
-1. It doesn't change data model, so every objects on your canvas wont be changed after zooming/grabbing
-2. It supports touch devices
+1. Doesn't change data model, so every objects on your canvas wont be changed after zooming/grabbing
+2. Supports touch devices
+3. Supports free drawing mode
 
 First [see an example](http://wojtek-krysiak.github.io/fabricjs-viewport/)
 
