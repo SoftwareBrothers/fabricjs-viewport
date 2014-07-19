@@ -26,7 +26,6 @@ class fabric.Viewport
     @_adjustPositionAfterZoom(newZoom)
     @zoom = newZoom
 
-  # need some work
   _adjustPositionAfterZoom: (newZoom) ->
     width = @canvas.width
     height = @canvas.height
