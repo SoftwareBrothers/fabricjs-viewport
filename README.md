@@ -8,7 +8,7 @@ Simple implementation of viewport and zoom in fabricjs.
 2. Supports touch devices
 3. Supports free drawing mode
 
-First [see an example](http://wojtek-krysiak.github.io/fabricjs-viewport/)
+First [see an example](http://rstgroup.github.io/fabricjs-viewport/)
 
 ### How to use it
 
