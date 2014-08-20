@@ -1,6 +1,6 @@
 # fabricjs-viewport
 
-[![KMPIT](http://kmpit.com/badge_kmpit.png)](http://bitly.com/kmpitcom) [![KMPIT](http://kmpit.com/badge_howwedoapps.png)](http://bitly.com/howwedoapps)
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
 
 Simple implementation of viewport and zoom in fabricjs. 
 
