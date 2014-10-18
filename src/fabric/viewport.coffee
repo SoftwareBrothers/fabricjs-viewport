@@ -1,5 +1,5 @@
 class fabric.Viewport
-  constructor: (canvas) -> 
+  constructor: (canvas) ->
     @i = 0
     @position = new fabric.Point(0,0)
     @zoom = 1
@@ -26,10 +26,11 @@ class fabric.Viewport
     @_adjustPositionAfterZoom(newZoom)
     @zoom = newZoom
 
-  # need some work
   _adjustPositionAfterZoom: (newZoom) ->
-    @position.x = @position.x*newZoom/@zoom + @canvas.width*(@zoom/newZoom-1)/2
-    @position.y = @position.y*newZoom/@zoom + @canvas.height*(@zoom/newZoom-1)/2
+    width = @canvas.width
+    height = @canvas.height
+    @position.x += ((@zoom * width) - (newZoom * width)) / 2;
+    @position.y += ((@zoom * height) - (newZoom * height)) / 2;
 
   translate: () ->
     {
@@ -39,14 +40,14 @@ class fabric.Viewport
 
   transform: (event) ->
     touchProp = if event.type == 'touchend' then 'changedTouches' else 'touches'
-    
+
     if event[touchProp] && event[touchProp][0]
       ex = {}
       ex[touchProp] = _.map(event[touchProp], (t) => @_transformEventParams(t) )
       $.extend($.Event(event.type), ex)
     else
       $.extend($.Event(event.type), @_transformEventParams(event))
-    
+
   _transformEventParams: (e) ->
     offsetTop = @canvas.wrapperEl.getBoundingClientRect().top
     offsetLeft = @canvas.wrapperEl.getBoundingClientRect().left
