@@ -108,11 +108,12 @@
     };
 
     Viewport.prototype._adjustPositionAfterZoom = function(newZoom) {
-      var height, width;
-      width = this.canvas.width;
-      height = this.canvas.height;
-      this.position.x += ((this.zoom * width) - (newZoom * width)) / 2;
-      return this.position.y += ((this.zoom * height) - (newZoom * height)) / 2;
+      var halfHeight, halfWidth, k;
+      halfWidth = this.canvas.width / 2;
+      halfHeight = this.canvas.height / 2;
+      k = newZoom / this.zoom;
+      this.position.x = halfWidth - k * (halfWidth - this.position.x);
+      return this.position.y = halfHeight - k * (halfHeight - this.position.y);
     };
 
     Viewport.prototype.translate = function() {
