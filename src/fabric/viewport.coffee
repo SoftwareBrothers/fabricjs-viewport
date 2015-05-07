@@ -27,10 +27,11 @@ class fabric.Viewport
     @zoom = newZoom
 
   _adjustPositionAfterZoom: (newZoom) ->
-    width = @canvas.width
-    height = @canvas.height
-    @position.x += ((@zoom * width) - (newZoom * width)) / 2;
-    @position.y += ((@zoom * height) - (newZoom * height)) / 2;
+    halfWidth = @canvas.width / 2
+    halfHeight = @canvas.height / 2
+    k = newZoom / @zoom
+    @position.x = halfWidth - k * (halfWidth - @position.x)
+    @position.y = halfHeight - k * (halfHeight - @position.y)
 
   translate: () ->
     {
