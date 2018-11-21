@@ -1,14 +1,12 @@
 # fabricjs-viewport
 
-[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
-
 Simple implementation of viewport and zoom in fabricjs. 
 
 1. Doesn't change data model, so none of the objects on your canvas is changed after zooming/grabbing
 2. Supports touch devices
 3. Supports free drawing mode
 
-First [see an example](http://rstgroup.github.io/fabricjs-viewport/)
+First [see an example](http://softwarebrothers.github.io/fabricjs-viewport/)
 
 ### How to use it
 
@@ -43,17 +41,16 @@ You also can zoom in and out:
 c.setZoom(c.viewport.zoom*1.1); // zoom in by 10%
 ```
 
+## License
+
+fabricjs-viewport is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
+
+## About SoftwareBrothers.co
+
+<img src="https://softwarebrothers.co/assets/images/software-brothers-logo-full.svg" width=240>
 
 
+We’re an open, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
 
-
-
-### MIT License
-
-Copyright (C) 2014 Wojciech Krysiak
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* We are available to [hire](https://softwarebrothers.co/contact).
+* If you want to work for us - checkout the [career page](https://softwarebrothers.co/career).
