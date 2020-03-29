@@ -41,6 +41,11 @@ You also can zoom in and out:
 c.setZoom(c.viewport.zoom*1.1); // zoom in by 10%
 ```
 
+## OpenSource SoftwareBrothers community
+
+- [Join the community](https://join.slack.com/t/adminbro/shared_invite/zt-czfb79t1-0U7pn_KCqd5Ts~lbJK0_RA) to get help and be inspired.
+- subscribe to our [newsletter](https://www.getrevue.co/profile/adminbro)
+
 ## License
 
 fabricjs-viewport is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
@@ -52,5 +57,5 @@ fabricjs-viewport is Copyright © 2018 SoftwareBrothers.co. It is free software,
 
 We are a software company who provides web and mobile development and UX/UI services, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
 
-* We are available to [hire](https://softwarebrothers.co/contact).
+* We are available for [hire](https://softwarebrothers.co/contact).
 * If you want to work for us - checkout the [career page](https://softwarebrothers.co/career).
